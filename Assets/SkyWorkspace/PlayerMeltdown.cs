@@ -1,23 +1,36 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System;
+using Unity.Mathematics;
 
 public class PlayerMeltdown : MonoBehaviour
 {
     public event Action OnPlayerMelted;
 
     [Header("Counter Settings")]
-    [SerializeField] private int initialValue = 100;
+    [SerializeField] private int maxValue = 100;
     [SerializeField] private int currentValue;
-    [SerializeField] private int decrementAmount = 1;
+    public int meltSpeed = 1;
     [SerializeField] private int framesBetweenDecrement = 25;
 
     [Header("Scaling Settings")]
-    [SerializeField] private Transform targetObject;
     [SerializeField] private Vector3 minScale = Vector3.one * 0.1f;
     [SerializeField] private Vector3 maxScale = Vector3.one;
 
     private int frameCounter;
     private Vector3 originalScale;
+
+
+    [SerializeField] private Transform targetObject;
+    [SerializeField] private Image healthBar;
+
+
+    [SerializeField] private ParticleSystem waterParticles;
+    private float defaultParticleRate = 10f;
+    [SerializeField] private float minParticleRate = 10f;
+    [SerializeField] private float maxParticleRate = 10f;
+
+    private ParticleSystem.EmissionModule emissionModule;
 
     void Start()
     {
@@ -25,8 +38,15 @@ public class PlayerMeltdown : MonoBehaviour
             targetObject = transform;
 
         originalScale = targetObject.localScale;
+
+        if (waterParticles != null)
+        {
+            emissionModule = waterParticles.emission;
+        }
+
         ResetCounter();
     }
+
 
     void FixedUpdate()
     {
@@ -35,17 +55,17 @@ public class PlayerMeltdown : MonoBehaviour
         if (frameCounter >= framesBetweenDecrement)
         {
             frameCounter = 0;
-            DecrementCounter();
+            TickMelt();
         }
 
         //UpdateObjectScale();
     }
 
-    private void DecrementCounter()
+    private void TickMelt()
     {
         if (currentValue <= 0) return;
 
-        SubtractFromCounter(decrementAmount);
+        SubtractFromCounter(meltSpeed);
 
         if (currentValue <= 0)
         {
@@ -58,35 +78,41 @@ public class PlayerMeltdown : MonoBehaviour
     {
         if (targetObject == null) return;
 
-        float progress = (float)currentValue / initialValue; // 1.0 → 0.0
+        float progress = (float)currentValue / maxValue; // 1.0 → 0.0
 
         Vector3 newScale = Vector3.Lerp(minScale, maxScale, progress);
 
         targetObject.localScale = newScale;
+
+        healthBar.fillAmount = progress;
+
+        var rate = emissionModule.rateOverTime;
+        rate.constant = Math.Clamp(defaultParticleRate * meltSpeed, minParticleRate, maxParticleRate);
+        emissionModule.rateOverTime = rate;
     }
 
     public void SetCounterValue(int newValue)
     {
-        currentValue = Mathf.Max(0, newValue);
+        currentValue = Mathf.Clamp(newValue, 0, maxValue);
 
         UpdateObjectScale();
     }
 
     public void ResetCounter()
     {
-        currentValue = initialValue;
+        currentValue = maxValue;
         frameCounter = 0;
         if (targetObject != null)
             targetObject.localScale = maxScale;
     }
 
-    
+
 
     public void AddToCounter(int amount)
     {
         SetCounterValue(currentValue + amount);
-        if (currentValue > initialValue)
-            currentValue = initialValue;
+        if (currentValue > maxValue)
+            currentValue = maxValue;
     }
 
     public void SubtractFromCounter(int amount)
@@ -102,7 +128,7 @@ public class PlayerMeltdown : MonoBehaviour
 
     public void SetDecrementAmount(int newAmount)
     {
-        decrementAmount = Mathf.Max(1, newAmount);
+        meltSpeed = Mathf.Max(1, newAmount);
     }
 
     public void StopCounter()
