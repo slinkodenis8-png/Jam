@@ -104,10 +104,6 @@ public class WaypointMover : MonoBehaviour
         newWaypoint.transform.SetParent(transform);
         newWaypoint.transform.position = transform.position + Vector3.right * (waypoints.Count + 1) * 2;
 
-        SphereCollider collider = newWaypoint.AddComponent<SphereCollider>();
-        collider.radius = gizmoRadius;
-        collider.isTrigger = true;
-
         RefreshWaypoints();
     }
 
