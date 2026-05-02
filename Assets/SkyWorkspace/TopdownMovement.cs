@@ -82,7 +82,7 @@ public class TopDownCharacterController : MonoBehaviour
 
         rb.linearVelocity = currentVelocity;
 
-        RotateTowardsMovement(playerVisual.transform);
+        //RotateTowardsMovement(playerVisual.transform);
     }
 
     void RotateTowardsMovement(Transform target)
