@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Bonus
   layers:
   - Default
   - TransparentFX
@@ -41,11 +42,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 3532556131
-    locked: 0
-  - name: OnPlayer
-    uniqueID: 2004186107
-    locked: 0
   m_RenderingLayers:
   - Default
+  m_MigratedRenderPipelines: []
