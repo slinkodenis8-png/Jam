@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 0, g: 0.88181186, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -308,7 +308,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2192245952590576796, guid: 02dc3e347a396f7479801e657b2d6ce7, type: 3}
+  m_Sprite: {fileID: 2192245952590576796, guid: 8e7668e6028c69140aae54a70c76e8e3, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -462,7 +462,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a760f0d82c9ca83438a0fbeaf9121018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MeltZone
-  meltPower: -11
 --- !u!4 &399940695
 Transform:
   m_ObjectHideFlags: 0
@@ -509,7 +508,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 428629222}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 983d39cc75acf134487f3d8f77758eb3, type: 3}
+  m_Script: {fileID: 11500000, guid: 85329cd2e6c722344bf8ca2b7521b8c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TopDownCharacterController
   maxSpeed: 5
@@ -529,7 +528,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 428629222}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -573,7 +572,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 428629222}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af6525a07e2670545b9170491681c6c0, type: 3}
+  m_Script: {fileID: 11500000, guid: fd45c2d39e0c11e46afe7d609709c7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMeltdown
   maxValue: 100
@@ -585,7 +584,7 @@ MonoBehaviour:
   targetObject: {fileID: 428629225}
   healthBar: {fileID: 346687112}
   waterParticles: {fileID: 428629227}
-  minParticleRate: 0
+  minParticleRate: 10
   maxParticleRate: 50
 --- !u!198 &428629227
 ParticleSystem:
@@ -5512,6 +5511,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
+  m_UseReflectionProbes: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -5617,7 +5617,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 651944566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac47d6b404673064b88a61c82d725ca0, type: 3}
+  m_Script: {fileID: 11500000, guid: 44295f5aa7c7c5142ad523ea7ac6b69b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletLauncher
   bulletPrefab: {fileID: 6590642321187081258, guid: 414666579684dfc4c9ca331c7f1f263f, type: 3}
@@ -5631,56 +5631,47 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
+      inSlope: 30.37015
+      outSlope: 30.37015
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.04460027
-      value: 0.6400782
-      inSlope: -3.1574788
-      outSlope: -3.1574788
+      time: 0.027557783
+      value: 0.836934
+      inSlope: 6.4034996
+      outSlope: 6.4034996
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.07987147
+      outWeight: 0.061621353
     - serializedVersion: 3
-      time: 0.086862125
-      value: 0.12614799
-      inSlope: -2.075609
-      outSlope: -2.075609
-      tangentMode: 0
+      time: 0.13021027
+      value: 0.084130466
+      inSlope: 4.693245
+      outSlope: 4.693245
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.20199221
-      value: 0.3772222
-      inSlope: 2.8719957
-      outSlope: 2.8719957
+      time: 0.15875044
+      value: 0.5613224
+      inSlope: 1.7189711
+      outSlope: 1.7189711
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.03348471
-    - serializedVersion: 3
-      time: 0.31626853
-      value: 0.9029317
-      inSlope: 0.5528997
-      outSlope: 0.5528997
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.0823477
+      inWeight: 0.3262415
+      outWeight: 0.036250383
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      inSlope: 0.5214595
+      outSlope: 0.5214595
+      tangentMode: 34
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -5760,13 +5751,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97413450d43783d418bdf12871df4356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaypointMover
-  targetRigidbody: {fileID: 651944569}
-  moveSpeed: 5
-  reachDistance: 0.1
-  loopWaypoints: 1
-  autoStart: 1
-  pathColor: {r: 0.022774577, g: 1, b: 0, a: 1}
-  gizmoRadius: 0.3
 --- !u!4 &1081914325
 Transform:
   m_ObjectHideFlags: 0
@@ -6179,7 +6163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a760f0d82c9ca83438a0fbeaf9121018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MeltZone
-  meltPower: 10
 --- !u!4 &1538068493
 Transform:
   m_ObjectHideFlags: 0
@@ -6461,7 +6444,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 15
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2192245952590576796, guid: 02dc3e347a396f7479801e657b2d6ce7, type: 3}
+  m_Sprite: {fileID: 2192245952590576796, guid: 8e7668e6028c69140aae54a70c76e8e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
