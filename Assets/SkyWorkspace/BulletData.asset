@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8666b007112c2d346a2b9bf60990bcd5, type: 3}
+  m_Name: BulletData
+  m_EditorClassIdentifier: Assembly-CSharp::BulletSettingsSO
+  bulletSettings:
+    bulletPrefab: {fileID: 0}
+    tracePrefab: {fileID: 0}
+    xSpeed: 0
+    ySpeed: 0
+    lifetime: 0
+    damage: 0
+    forwardSpeedCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    sidewaysSpeedCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4

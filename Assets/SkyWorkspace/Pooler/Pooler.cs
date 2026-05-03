@@ -1,20 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VectorGraphics;
 using UnityEngine;
 
 public static class Pooler
 {
     private static Dictionary<string, Pool> pools = new Dictionary<string, Pool>();
 
-    public static (GameObject, bool) PoolSpawn(GameObject go, Vector3 pos, Quaternion rot)
+    public static (GameObject, bool) PoolSpawn(GameObject go, Vector3 pos, Quaternion rot, GameObject newParent = null)
     {
         GameObject obj;
         string key = go.name.Replace(" (Clone)", "");
+
         if (pools.ContainsKey(key))
         {
             if (pools[key].inactive.Count == 0)
             {
-                obj = Object.Instantiate(go, pos, rot, pools[key].parent.transform);
+                if (newParent == null)
+                {
+                    newParent = pools[key].parent;
+                }
+
+                obj = Object.Instantiate(go, pos, rot, newParent.transform);
                 return (obj, true);
             }
             else
@@ -22,13 +29,21 @@ public static class Pooler
                 obj = pools[key].inactive.Pop();
                 obj.transform.position = pos;
                 obj.transform.rotation = rot;
+                if (newParent != null)
+                {
+                    obj.transform.SetParent(newParent.transform);
+                }
                 obj.SetActive(true);
                 return (obj, false);
             }
         }
         else
         {
-            GameObject newParent = new GameObject($"{key}_POOL");
+            if (newParent == null)
+            {
+                newParent = new GameObject($"{key}_POOL");
+            }
+
             Pool newPool = new Pool(newParent);
             pools.Add(key, newPool);
             obj = Object.Instantiate(go, pos, rot, newParent.transform);
@@ -71,7 +86,7 @@ public static class Pooler
 
 
             //if (pool.inactive.Count == pool.parent.gameObject.transform.childCount && pool.parent != null)
-                //Object.Destroy(pool.parent);
+            //Object.Destroy(pool.parent);
         }
 
         //pools.Clear();

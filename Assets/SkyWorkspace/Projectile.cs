@@ -6,7 +6,8 @@ public class Projectile : MonoBehaviour
     //[SyncVar]
     public Vector3 direction;
     //[SyncVar]
-    public float speed = 10f;
+    public float xSpeed = 10f;
+    public float ySpeed = 10f;
     //[SyncVar]
     public float maxLifetime;
     private float currentLifetime = 0;
@@ -31,9 +32,6 @@ public class Projectile : MonoBehaviour
 
     private bool isActive;
 
-
-    public GameObject tracePrefab;
-
     void Start()
     {
     }
@@ -48,9 +46,9 @@ public class Projectile : MonoBehaviour
         float forwardMultiplier = forwardSpeedCurve.Evaluate(currentLifetime);
         float sidewaysMultiplier = sidewaysSpeedCurve.Evaluate(currentLifetime);
 
-        Vector2 forwardMovement = transform.up * speed * forwardMultiplier;
+        Vector2 forwardMovement = transform.up * xSpeed * forwardMultiplier;
 
-        Vector2 sidewaysMovement = transform.right * speed * sidewaysMultiplier;
+        Vector2 sidewaysMovement = transform.right * ySpeed * sidewaysMultiplier;
 
         Vector2 totalMovement = forwardMovement + sidewaysMovement;
 
@@ -63,7 +61,7 @@ public class Projectile : MonoBehaviour
         spriteRenderer.enabled = true;
         trailRenderer.Clear();
         isActive = true;
-        
+
     }
 
     void OnDisable()
@@ -89,20 +87,13 @@ public class Projectile : MonoBehaviour
         direction = newDirection;
         transform.up = direction;
 
-        speed = bulletSettings.xSpeed;
+        xSpeed = bulletSettings.xSpeed;
+        ySpeed = bulletSettings.xSpeed;
         maxLifetime = bulletSettings.lifetime;
         damage = bulletSettings.damage;
         forwardSpeedCurve = bulletSettings.forwardSpeedCurve;
         sidewaysSpeedCurve = bulletSettings.sidewaysSpeedCurve;
 
         StartCoroutine(DestroyAfterLifetime());
-
-        TraceManager.Instance.DrawLineOverTime(transform.position, transform.position + (direction * 12), tracePrefab, 0.9f, 0.3f, 0.3f);
-    }
-
-
-    public void UpdateSpeed(float newSpeed)
-    {
-        speed = newSpeed;
     }
 }

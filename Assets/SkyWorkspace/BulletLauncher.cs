@@ -15,9 +15,8 @@ public class BulletLauncher : MonoBehaviour
     public AnimationCurve xSpeedCurve = AnimationCurve.EaseInOut(1, 0, 0, 1f);
     public AnimationCurve ySpeedCurve = AnimationCurve.Linear(1, 0, 1f, 1f);
 
-    [Header("Targeting")]
-    [SerializeField] private string targetTag = "Enemy";
-    [SerializeField] private int piercing = 2;
+    public bool drawTrace;
+    public GameObject tracePrefab;
 
     public Transform target;
 
@@ -57,7 +56,7 @@ public class BulletLauncher : MonoBehaviour
                 float deviationAngle = -spreadAngle / 2f + (i * angleStep);
                 Vector3 spreadDirection = RotateVector(baseDirection, deviationAngle);
 
-                LaunchBulletInDirection(spreadDirection);
+                LaunchBulletInDirection(spreadDirection, drawTrace);
             }
 
             yield return new WaitForSeconds(burstDelay);
@@ -86,7 +85,7 @@ public class BulletLauncher : MonoBehaviour
         return (to.position - from.position).normalized;
     }
 
-    public void LaunchBulletInDirection(Vector3 direction)
+    public void LaunchBulletInDirection(Vector3 direction, bool drawTrace = false)
     {
         if (bulletPrefab == null || target == null)
         {
@@ -101,31 +100,14 @@ public class BulletLauncher : MonoBehaviour
         if (bullet != null)
         {
             bullet.Initialize(bulletData, direction);
+            if (drawTrace)
+            {
+                TraceManager.Instance.DrawLineOverTime(transform.position, transform.position + (direction * 12), tracePrefab, 0.9f, 0.3f, 0.3f);
+            }
         }
         else
         {
             Debug.LogError("Projectile component not found on bullet prefab!");
         }
     }
-}
-
-[System.Serializable]
-public struct BulletSettings
-{
-    public float xSpeed;
-    public float ySpeed;
-    public float lifetime;
-    public int damage;
-    public AnimationCurve forwardSpeedCurve;
-    public AnimationCurve sidewaysSpeedCurve;
-
-    public static BulletSettings Default => new BulletSettings
-    {
-        xSpeed = 10f,
-        ySpeed = 2f,
-        lifetime = 5f,
-        damage = 10,
-        forwardSpeedCurve = new AnimationCurve(new Keyframe(0, 10), new Keyframe(1, 10)),
-        sidewaysSpeedCurve = new AnimationCurve(new Keyframe(0, 0), new Keyframe(1, 0))
-    };
 }
