@@ -36,7 +36,6 @@ public class Projectile : MonoBehaviour
 
     void Start()
     {
-        // Инициализация может происходить в OnEnable
     }
 
     void FixedUpdate()
@@ -46,14 +45,11 @@ public class Projectile : MonoBehaviour
 
         float normalizedTime = Mathf.Clamp01(currentLifetime / maxLifetime);
 
-        // Получаем значения из кривых
         float forwardMultiplier = forwardSpeedCurve.Evaluate(currentLifetime);
         float sidewaysMultiplier = sidewaysSpeedCurve.Evaluate(currentLifetime);
 
-        // Движение вперёд (в направлении transform.forward)
         Vector2 forwardMovement = transform.up * speed * forwardMultiplier;
 
-        // Боковое движение (перпендикулярно направлению)
         Vector2 sidewaysMovement = transform.right * speed * sidewaysMultiplier;
 
         Vector2 totalMovement = forwardMovement + sidewaysMovement;
