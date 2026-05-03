@@ -5,16 +5,13 @@ public class TraceManager : MonoBehaviour
 {
     public static TraceManager Instance { get; private set; }
     
-
     void Awake()
     {
-        // Ensure only one instance exists
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
         }
-
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
@@ -47,7 +44,7 @@ public class TraceManager : MonoBehaviour
         }
     }
 
-    public void DrawLineOverTime(Vector3 startPoint, Vector3 endPoint, GameObject linePrefab, float drawDuration, float lineLifetime)
+    public void DrawLineOverTime(Vector3 startPoint, Vector3 endPoint, GameObject linePrefab, float lineLifetime = 1f, float drawDuration = 0.2f, float collapseDuration = 0.2f)
     {
         if (linePrefab == null)
         {
@@ -61,11 +58,11 @@ public class TraceManager : MonoBehaviour
         if (lineRenderer == null)
         {
             Debug.LogError("Line prefab doesn't have LineRenderer component!");
-            Destroy(lineInstance);
+            Pooler.PoolDespawn(lineInstance);
             return;
         }
 
-        StartCoroutine(DrawLineAnimation(lineRenderer, startPoint, endPoint, drawDuration, lineLifetime));
+        StartCoroutine(DrawAndCollapseLineAnimation(lineRenderer, startPoint, endPoint, drawDuration, collapseDuration, lineLifetime));
     }
 
     private IEnumerator QueryDespawn(GameObject go, float destroyAfter)
@@ -74,7 +71,7 @@ public class TraceManager : MonoBehaviour
         Pooler.PoolDespawn(go);
     }
 
-    private IEnumerator DrawLineAnimation(LineRenderer lineRenderer, Vector3 startPoint, Vector3 endPoint, float drawDuration, float totalLifetime)
+    private IEnumerator DrawAndCollapseLineAnimation(LineRenderer lineRenderer, Vector3 startPoint, Vector3 endPoint, float drawDuration, float collapseDuration, float totalLifetime)
     {
         lineRenderer.positionCount = 2;
         lineRenderer.SetPosition(0, startPoint);
@@ -86,7 +83,6 @@ public class TraceManager : MonoBehaviour
         {
             elapsedTime += Time.deltaTime;
             float progress = Mathf.Clamp01(elapsedTime / drawDuration);
-
             Vector3 currentEndPoint = Vector3.Lerp(startPoint, endPoint, progress);
             lineRenderer.SetPosition(1, currentEndPoint);
             yield return null;
@@ -94,7 +90,26 @@ public class TraceManager : MonoBehaviour
 
         lineRenderer.SetPosition(1, endPoint);
 
-        float remainingLifetime = totalLifetime - drawDuration;
+        float animationTimeLeft = totalLifetime - drawDuration;
+
+        if (collapseDuration > 0 && animationTimeLeft > 0)
+        {
+            float collapseTime = Mathf.Min(collapseDuration, animationTimeLeft);
+            float collapseElapsed = 0f;
+
+            while (collapseElapsed < collapseTime)
+            {
+                collapseElapsed += Time.deltaTime;
+                float collapseProgress = Mathf.Clamp01(collapseElapsed / collapseTime);
+                Vector3 currentStartPoint = Vector3.Lerp(startPoint, endPoint, collapseProgress);
+                lineRenderer.SetPosition(0, currentStartPoint);
+                yield return null;
+            }
+
+            lineRenderer.SetPosition(0, endPoint);
+        }
+
+        float remainingLifetime = totalLifetime - drawDuration - collapseDuration;
         if (remainingLifetime > 0)
         {
             StartCoroutine(QueryDespawn(lineRenderer.gameObject, remainingLifetime));

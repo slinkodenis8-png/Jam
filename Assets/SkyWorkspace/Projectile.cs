@@ -101,7 +101,7 @@ public class Projectile : MonoBehaviour
 
         StartCoroutine(DestroyAfterLifetime());
 
-        TraceManager.Instance.DrawLineOverTime(transform.position, transform.position + (direction * 12), tracePrefab, 0.3f, 0.9f);
+        TraceManager.Instance.DrawLineOverTime(transform.position, transform.position + (direction * 12), tracePrefab, 0.9f, 0.3f, 0.3f);
     }
 
 
