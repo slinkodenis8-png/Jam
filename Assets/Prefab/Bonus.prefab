@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1237540373542561597}
   - component: {fileID: 8147698904305223607}
   - component: {fileID: 6568506416430554399}
+  - component: {fileID: 6733352729792474683}
   m_Layer: 0
   m_Name: Bonus
   m_TagString: Bonus
@@ -138,3 +139,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6733352729792474683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178578237417615103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd6d80cf68c8f8439d9b98bfd3ea5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Bonus
