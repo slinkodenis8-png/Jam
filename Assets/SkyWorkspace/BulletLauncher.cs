@@ -12,13 +12,17 @@ public class BulletLauncher : MonoBehaviour
     [SerializeField] private float maxLifetime = 5f;
     [SerializeField] private float damage = 10f;
 
-    public AnimationCurve speedCurve = AnimationCurve.EaseInOut(1, 0, 0, 1f);
+    public AnimationCurve xSpeedCurve = AnimationCurve.EaseInOut(1, 0, 0, 1f);
+    public AnimationCurve ySpeedCurve = AnimationCurve.Linear(1, 0, 1f, 1f);
 
     [Header("Targeting")]
     [SerializeField] private string targetTag = "Enemy";
     [SerializeField] private int piercing = 2;
 
     public Transform target;
+
+
+    public BulletSettings bulletData;
 
     void Start()
     {
@@ -96,17 +100,32 @@ public class BulletLauncher : MonoBehaviour
 
         if (bullet != null)
         {
-            bullet.direction = direction;
-            bullet.speed = bulletSpeed;
-            bullet.maxLifetime = maxLifetime;
-            bullet.damage = damage;
-            bullet.damageableTag = targetTag;
-            bullet.piercing = piercing;
-            bullet.speedCurve = speedCurve;
+            bullet.Initialize(bulletData, direction);
         }
         else
         {
             Debug.LogError("Projectile component not found on bullet prefab!");
         }
     }
+}
+
+[System.Serializable]
+public struct BulletSettings
+{
+    public float xSpeed;
+    public float ySpeed;
+    public float lifetime;
+    public int damage;
+    public AnimationCurve forwardSpeedCurve;
+    public AnimationCurve sidewaysSpeedCurve;
+
+    public static BulletSettings Default => new BulletSettings
+    {
+        xSpeed = 10f,
+        ySpeed = 2f,
+        lifetime = 5f,
+        damage = 10,
+        forwardSpeedCurve = new AnimationCurve(new Keyframe(0, 10), new Keyframe(1, 10)),
+        sidewaysSpeedCurve = new AnimationCurve(new Keyframe(0, 0), new Keyframe(1, 0))
+    };
 }

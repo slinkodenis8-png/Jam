@@ -12,10 +12,10 @@ public class Projectile : MonoBehaviour
     private float currentLifetime = 0;
     //[SyncVar]
     public float damage;
-    //[SyncVar]
-    public string damageableTag = "Enemy";
 
     // References
+    [SerializeField]
+    private Rigidbody2D rb;
     [SerializeField]
     private SpriteRenderer spriteRenderer;
     [SerializeField]
@@ -25,16 +25,18 @@ public class Projectile : MonoBehaviour
     [SerializeField]
     private ParticleSystem particles;
 
-    public int piercing = 2;
+    [Header("Speed Curves")]
+    public AnimationCurve forwardSpeedCurve = new AnimationCurve(new Keyframe(0, 1), new Keyframe(1, 1));
+    public AnimationCurve sidewaysSpeedCurve = new AnimationCurve(new Keyframe(0, 0), new Keyframe(1, 0));
 
-    public bool isActive;
+    private bool isActive;
 
-    [HideInInspector]
-    public AnimationCurve speedCurve = AnimationCurve.EaseInOut(1, 0, 0, 1f);
+
+    public GameObject tracePrefab;
 
     void Start()
     {
-        //StartCoroutine(DestroyAfterLifetime());
+        // Инициализация может происходить в OnEnable
     }
 
     void FixedUpdate()
@@ -43,25 +45,34 @@ public class Projectile : MonoBehaviour
         currentLifetime += Time.fixedDeltaTime;
 
         float normalizedTime = Mathf.Clamp01(currentLifetime / maxLifetime);
-        float curveValue = speedCurve.Evaluate(normalizedTime);
 
-        transform.position += direction * speed * curveValue * Time.fixedDeltaTime;
+        // Получаем значения из кривых
+        float forwardMultiplier = forwardSpeedCurve.Evaluate(currentLifetime);
+        float sidewaysMultiplier = sidewaysSpeedCurve.Evaluate(currentLifetime);
+
+        // Движение вперёд (в направлении transform.forward)
+        Vector2 forwardMovement = transform.up * speed * forwardMultiplier;
+
+        // Боковое движение (перпендикулярно направлению)
+        Vector2 sidewaysMovement = transform.right * speed * sidewaysMultiplier;
+
+        Vector2 totalMovement = forwardMovement + sidewaysMovement;
+
+        rb.MovePosition(rb.position + totalMovement * Time.fixedDeltaTime);
     }
 
     void OnEnable()
     {
-        currentLifetime = 0;
         coll.enabled = true;
         spriteRenderer.enabled = true;
         trailRenderer.Clear();
         isActive = true;
-
-        StartCoroutine(DestroyAfterLifetime());
-
+        
     }
 
-    private void UpdateSpeed()
+    void OnDisable()
     {
+        StopAllCoroutines();
 
     }
 
@@ -74,5 +85,28 @@ public class Projectile : MonoBehaviour
     void DestroySelf()
     {
         Pooler.PoolDespawn(gameObject);
+    }
+
+
+    public void Initialize(BulletSettings bulletSettings, Vector3 newDirection)
+    {
+        direction = newDirection;
+        transform.up = direction;
+
+        speed = bulletSettings.xSpeed;
+        maxLifetime = bulletSettings.lifetime;
+        damage = bulletSettings.damage;
+        forwardSpeedCurve = bulletSettings.forwardSpeedCurve;
+        sidewaysSpeedCurve = bulletSettings.sidewaysSpeedCurve;
+
+        StartCoroutine(DestroyAfterLifetime());
+
+        TraceManager.Instance.DrawLineOverTime(transform.position, transform.position + (direction * 12), tracePrefab, 0.3f, 0.9f);
+    }
+
+
+    public void UpdateSpeed(float newSpeed)
+    {
+        speed = newSpeed;
     }
 }
