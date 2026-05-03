@@ -10,7 +10,6 @@ public class BulletSettingsSO : ScriptableObject
 public struct BulletSettings
 {
     public GameObject bulletPrefab;
-    public GameObject tracePrefab;
 
     public float xSpeed;
     public float ySpeed;

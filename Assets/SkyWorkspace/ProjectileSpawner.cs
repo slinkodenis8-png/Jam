@@ -16,24 +16,24 @@ public class ProjectileSpawner : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void FireOnce(BulletSettings bulletData, Transform firePoint, Transform target, bool drawTrace = false)
+    public void FireOnce(BulletSettings bulletData, Transform firePoint, Transform target)
     {
-        LaunchBulletInDirection(bulletData, firePoint.position, GetDirection(firePoint, target), drawTrace);
+        LaunchBulletInDirection(bulletData, firePoint.position, GetDirection(firePoint, target));
     }
 
-    public void FireFixedSpread(BulletSettings bulletData, Transform firePoint, Transform target, int bulletCount = 5, float spreadAngle = 45f, bool drawTrace = false)
-    {
-        Vector3 baseDirection = GetDirection(firePoint, target);
-        float angleStep = spreadAngle / (bulletCount - 1);
+    // public void FireFixedSpread(BulletSettings bulletData, Transform firePoint, Transform target, int bulletCount = 5, float spreadAngle = 45f)
+    // {
+    //     Vector3 baseDirection = GetDirection(firePoint, target);
+    //     float angleStep = spreadAngle / (bulletCount - 1);
 
-        for (int i = 0; i < bulletCount; i++)
-        {
-            float deviationAngle = -spreadAngle / 2f + (i * angleStep);
-            Vector3 spreadDirection = RotateVector(baseDirection, deviationAngle);
+    //     for (int i = 0; i < bulletCount; i++)
+    //     {
+    //         float deviationAngle = -spreadAngle / 2f + (i * angleStep);
+    //         Vector3 spreadDirection = RotateVector(baseDirection, deviationAngle);
 
-            LaunchBulletInDirection(bulletData, firePoint.position, spreadDirection, drawTrace);
-        }
-    }
+    //         LaunchBulletInDirection(bulletData, firePoint.position, spreadDirection);
+    //     }
+    // }
 
     /// <summary>
     /// Поворачивает 2D‑вектор на заданный угол (в градусах)
@@ -57,7 +57,7 @@ public class ProjectileSpawner : MonoBehaviour
         return (to.position - from.position).normalized;
     }
 
-    private void LaunchBulletInDirection(BulletSettings bulletData, Vector3 from, Vector3 direction, bool drawTrace = false)
+    private void LaunchBulletInDirection(BulletSettings bulletData, Vector3 from, Vector3 direction)
     {
         if (bulletData.bulletPrefab == null)
         {
@@ -72,10 +72,6 @@ public class ProjectileSpawner : MonoBehaviour
         if (bullet != null)
         {
             bullet.Initialize(bulletData, direction);
-            if (drawTrace)
-            {
-                TraceManager.Instance.DrawLineOverTime(from, from + (direction * 12), bulletData.tracePrefab, 0.9f, 0.3f, 0.3f);
-            }
         }
         else
         {

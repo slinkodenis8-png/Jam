@@ -5740,7 +5740,6 @@ MonoBehaviour:
   target: {fileID: 428629225}
   bulletData:
     bulletPrefab: {fileID: 6590642321187081258, guid: 414666579684dfc4c9ca331c7f1f263f, type: 3}
-    tracePrefab: {fileID: 37005011606997688, guid: 7d9981fff4010974cb5e252fb6c07d87, type: 3}
     xSpeed: 10
     ySpeed: 2
     lifetime: 5
@@ -5959,9 +5958,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TestAI
   drawTrace: 1
+  tracePrefab: {fileID: 37005011606997688, guid: 7d9981fff4010974cb5e252fb6c07d87, type: 3}
   target: {fileID: 428629225}
   firePoint: {fileID: 0}
   bulletData: {fileID: 11400000, guid: 3967983c91aaaed4b8ed2d95fcc001e2, type: 2}
+  shotCooldown: 1
 --- !u!1 &1081914323
 GameObject:
   m_ObjectHideFlags: 0

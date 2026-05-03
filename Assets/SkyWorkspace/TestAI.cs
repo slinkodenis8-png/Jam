@@ -4,11 +4,13 @@ using System.Collections;
 public class TestAI : MonoBehaviour
 {
     public bool drawTrace;
+    public GameObject tracePrefab;
     public Transform target;
     public Transform firePoint;
-
-
     public BulletSettingsSO bulletData;
+
+
+    public float shotCooldown = 1f;
 
     void Start()
     {
@@ -22,8 +24,12 @@ public class TestAI : MonoBehaviour
     {
         while (true)
         {
-            ProjectileSpawner.Instance.FireOnce(bulletData.bulletSettings, firePoint, target, drawTrace);
-            yield return new WaitForSeconds(1f);
+            if (drawTrace)
+            {
+                TraceManager.Instance.DrawLineOverTime(firePoint.position, target.position, tracePrefab, 0.9f, 0.3f, 0.3f);   
+            }
+            ProjectileSpawner.Instance.FireOnce(bulletData.bulletSettings, firePoint, target);
+            yield return new WaitForSeconds(shotCooldown);
         }
     }
 }
