@@ -67,7 +67,7 @@ public class ProjectileSpawner : MonoBehaviour
 
         (GameObject bulletObject, bool isNew) = Pooler.PoolSpawn(bulletData.bulletPrefab, from, Quaternion.identity);
 
-        Projectile bullet = bulletObject.GetComponent<Projectile>();
+        IProjectile bullet = bulletObject.GetComponent<IProjectile>();
 
         if (bullet != null)
         {

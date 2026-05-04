@@ -1,16 +1,6 @@
 using UnityEngine;
 
-public class IProjectile : MonoBehaviour
+public interface IProjectile
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    void Initialize(BulletSettings bulletSettings, Vector3 newDirection);
 }

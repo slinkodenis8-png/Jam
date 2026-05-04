@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class Projectile : MonoBehaviour, IProjectile
 {
     //[SyncVar]
     public Vector3 direction;
@@ -34,6 +34,7 @@ public class Projectile : MonoBehaviour
 
     void Start()
     {
+        
     }
 
     void FixedUpdate()
@@ -61,13 +62,11 @@ public class Projectile : MonoBehaviour
         spriteRenderer.enabled = true;
         trailRenderer.Clear();
         isActive = true;
-
     }
 
     void OnDisable()
     {
         StopAllCoroutines();
-
     }
 
     IEnumerator DestroyAfterLifetime()
@@ -80,7 +79,6 @@ public class Projectile : MonoBehaviour
     {
         Pooler.PoolDespawn(gameObject);
     }
-
 
     public void Initialize(BulletSettings bulletSettings, Vector3 newDirection)
     {

@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BulletSettingsSO
   bulletSettings:
     bulletPrefab: {fileID: 6590642321187081258, guid: 414666579684dfc4c9ca331c7f1f263f, type: 3}
-    tracePrefab: {fileID: 37005011606997688, guid: 7d9981fff4010974cb5e252fb6c07d87, type: 3}
     xSpeed: 11.5
     ySpeed: 0
     lifetime: 5
