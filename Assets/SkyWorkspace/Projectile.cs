@@ -86,7 +86,7 @@ public class Projectile : MonoBehaviour, IProjectile
         transform.up = direction;
 
         xSpeed = bulletSettings.xSpeed;
-        ySpeed = bulletSettings.xSpeed;
+        ySpeed = bulletSettings.ySpeed;
         maxLifetime = bulletSettings.lifetime;
         damage = bulletSettings.damage;
         forwardSpeedCurve = bulletSettings.forwardSpeedCurve;

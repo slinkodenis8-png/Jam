@@ -21,19 +21,19 @@ public class ProjectileSpawner : MonoBehaviour
         LaunchBulletInDirection(bulletData, firePoint.position, GetDirection(firePoint, target));
     }
 
-    // public void FireFixedSpread(BulletSettings bulletData, Transform firePoint, Transform target, int bulletCount = 5, float spreadAngle = 45f)
-    // {
-    //     Vector3 baseDirection = GetDirection(firePoint, target);
-    //     float angleStep = spreadAngle / (bulletCount - 1);
+    public void FireFixedSpread(BulletSettings bulletData, Transform firePoint, Transform target, int bulletCount = 5, float spreadAngle = 45f)
+    {
+        Vector3 baseDirection = GetDirection(firePoint, target);
+        float angleStep = spreadAngle / (bulletCount - 1);
 
-    //     for (int i = 0; i < bulletCount; i++)
-    //     {
-    //         float deviationAngle = -spreadAngle / 2f + (i * angleStep);
-    //         Vector3 spreadDirection = RotateVector(baseDirection, deviationAngle);
+        for (int i = 0; i < bulletCount; i++)
+        {
+            float deviationAngle = -spreadAngle / 2f + (i * angleStep);
+            Vector3 spreadDirection = RotateVector(baseDirection, deviationAngle);
 
-    //         LaunchBulletInDirection(bulletData, firePoint.position, spreadDirection);
-    //     }
-    // }
+            LaunchBulletInDirection(bulletData, firePoint.position, spreadDirection);
+        }
+    }
 
     /// <summary>
     /// Поворачивает 2D‑вектор на заданный угол (в градусах)
