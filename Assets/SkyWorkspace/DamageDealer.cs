@@ -2,12 +2,14 @@ using UnityEngine;
 
 public class DamageDealer : MonoBehaviour
 {
+    public int damage = 1;
+    public bool selfDestroyOnHit;
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.CompareTag("Player"))
-        {
-            coll.GetComponent<IDamageable>().TakeDamage(1);
+        IDamageable target = coll.GetComponent<IDamageable>();
+        target?.TakeDamage(damage);
+
+        if (selfDestroyOnHit)
             GetComponent<IProjectile>().DestroySelf();
-        }
     }
 }

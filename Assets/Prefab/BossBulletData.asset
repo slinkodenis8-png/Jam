@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8666b007112c2d346a2b9bf60990bcd5, type: 3}
-  m_Name: BulletData
+  m_Name: BossBulletData
   m_EditorClassIdentifier: Assembly-CSharp::BulletSettingsSO
   bulletSettings:
     bulletPrefab: {fileID: 6590642321187081258, guid: 414666579684dfc4c9ca331c7f1f263f, type: 3}

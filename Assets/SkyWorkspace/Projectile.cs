@@ -96,10 +96,17 @@ public class Projectile : MonoBehaviour, IProjectile
         forwardSpeedCurve = bulletSettings.forwardSpeedCurve;
         sidewaysSpeedCurve = bulletSettings.sidewaysSpeedCurve;
 
+        DamageDealer dmgComponent = GetComponent<DamageDealer>();
+        if (dmgComponent != null)
+        {
+            dmgComponent.damage = bulletSettings.damage;
+        }
+        else
+        {
+            Debug.LogWarning("No DamageDealer component found");
+        }
+        
         StartCoroutine(DestroyAfterLifetime());
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        GetComponent<IDamageable>().TakeDamage(1);
-    }
+    
 }
