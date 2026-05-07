@@ -7,15 +7,15 @@ public class Projectile : MonoBehaviour, IProjectile
     public event Action OnDeath;
 
     //[SyncVar]
-    public Vector3 direction;
+    [SerializeField] public Vector3 direction;
     //[SyncVar]
-    public float xSpeed = 10f;
-    public float ySpeed = 10f;
+    [SerializeField] public float xSpeed = 10f;
+    [SerializeField] public float ySpeed = 10f;
     //[SyncVar]
-    public float maxLifetime;
-    private float currentLifetime = 0;
+    [SerializeField] public float maxLifetime;
+    [SerializeField] private float currentLifetime = 0;
     //[SyncVar]
-    public float damage;
+    [SerializeField] public float damage;
 
     // References
     [SerializeField]
@@ -45,7 +45,7 @@ public class Projectile : MonoBehaviour, IProjectile
         if (!isActive) return;
         currentLifetime += Time.fixedDeltaTime;
 
-        float normalizedTime = Mathf.Clamp01(currentLifetime / maxLifetime);
+        //float normalizedTime = Mathf.Clamp01(currentLifetime / maxLifetime);
 
         float forwardMultiplier = forwardSpeedCurve.Evaluate(currentLifetime);
         float sidewaysMultiplier = sidewaysSpeedCurve.Evaluate(currentLifetime);
