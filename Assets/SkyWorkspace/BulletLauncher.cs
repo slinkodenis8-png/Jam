@@ -4,13 +4,13 @@ using System.Collections;
 public class BulletLauncher : MonoBehaviour
 {
     [Header("Bullet Settings")]
-    [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private Transform firePoint;
+    public GameObject bulletPrefab;
+    public Transform firePoint;
 
     [Header("Launch Settings")]
-    [SerializeField] private float bulletSpeed = 10f;
-    [SerializeField] private float maxLifetime = 5f;
-    [SerializeField] private float damage = 10f;
+    public float bulletSpeed = 10f;
+    public float maxLifetime = 5f;
+    public float damage = 10f;
 
     public AnimationCurve xSpeedCurve = AnimationCurve.EaseInOut(1, 0, 0, 1f);
     public AnimationCurve ySpeedCurve = AnimationCurve.Linear(1, 0, 1f, 1f);
