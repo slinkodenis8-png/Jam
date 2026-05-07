@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
+using UnityEngine.UI;
 
 public class BossAI : MonoBehaviour, IDamageable
 {
@@ -10,8 +10,10 @@ public class BossAI : MonoBehaviour, IDamageable
     public int currentPoint;
 
     public float speed;
-    [Range (0,100)]
-    public int health=100;
+
+    public int maxHealth = 100;
+    [Range(0, 100)]
+    public int health = 100;
 
     public float attackTime;
     public float BreakTime;
@@ -35,20 +37,23 @@ public class BossAI : MonoBehaviour, IDamageable
     public Transform[] lowerPoints;
 
     private Animator anim;
+
+    public Image bossHpBar;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
+        health = maxHealth;
     }
 
 
- 
 
-    
 
-private void FixedUpdate()
+    private void FixedUpdate()
     {
-        if (health <=30)
+        if (health <= 30)
         {
             isAttack = false;
             scndStage = true;
@@ -70,31 +75,31 @@ private void FixedUpdate()
                 }
             }
             attackTime -= Time.deltaTime;
-            if(attackTime < 0)
+            if (attackTime < 0)
             {
                 isAttack = false;
             }
         }
         else
         {
-            if(!scndStage)
+            if (!scndStage)
             {
 
-            anim.SetBool("isAttack", false);
+                anim.SetBool("isAttack", false);
             }
             attackTime = 6;
-           transform.position =  Vector3.MoveTowards(transform.position, breakPoint.position, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, breakPoint.position, speed * Time.deltaTime);
             BreakTime -= Time.deltaTime;
-            if(BreakTime < 0)
+            if (BreakTime < 0)
             {
                 isAttack = true;
             }
         }
-            if (ended)
-            {
-               
-                StartCoroutine(att());
-            }
+        if (ended)
+        {
+
+            StartCoroutine(att());
+        }
         if (scndStage && used == false)
         {
             StartCoroutine(scndAtt());
@@ -111,8 +116,8 @@ private void FixedUpdate()
         else
         {
 
-                TraceManager.Instance.DrawLineOverTime(transform.position, Player.position, tracePrefab, 0.9f, 0.3f, 0.3f);
-            
+            TraceManager.Instance.DrawLineOverTime(transform.position, Player.position, tracePrefab, 0.9f, 0.3f, 0.3f);
+
             ProjectileSpawner.Instance.FireOnce(bulletData.bulletSettings, transform, Player);
         }
         ended = true;
@@ -124,36 +129,44 @@ private void FixedUpdate()
         bool queue = false;
         while (true)
         {
-            
+
             queue = !queue;
-        if (queue)
-        {
-            for(int i = 0; i < higherPoints.Length; i++)
+            if (queue)
             {
-                TraceManager.Instance.DrawLineOverTime(higherPoints[i].transform.position, lowerPoints[i].position, tracePrefab, 0.9f, 0.3f, 0.3f);
+                for (int i = 0; i < higherPoints.Length; i++)
+                {
+                    TraceManager.Instance.DrawLineOverTime(higherPoints[i].transform.position, lowerPoints[i].position, tracePrefab, 0.9f, 0.3f, 0.3f);
 
-                ProjectileSpawner.Instance.FireOnce(bulletData.bulletSettings, higherPoints[i].transform, lowerPoints[i].transform);
+                    ProjectileSpawner.Instance.FireOnce(bulletData.bulletSettings, higherPoints[i].transform, lowerPoints[i].transform);
+                }
             }
-        }
-        else
-        {
-            for (int i = 0; i < higherPoints.Length; i++)
+            else
             {
-                TraceManager.Instance.DrawLineOverTime(lowerPoints[i].transform.position, higherPoints[i].position, tracePrefab, 0.9f, 0.3f, 0.3f);
+                for (int i = 0; i < higherPoints.Length; i++)
+                {
+                    TraceManager.Instance.DrawLineOverTime(lowerPoints[i].transform.position, higherPoints[i].position, tracePrefab, 0.9f, 0.3f, 0.3f);
 
-                ProjectileSpawner.Instance.FireOnce(bulletData.bulletSettings, lowerPoints[i].transform, higherPoints[i].transform);
+                    ProjectileSpawner.Instance.FireOnce(bulletData.bulletSettings, lowerPoints[i].transform, higherPoints[i].transform);
+                }
             }
-        }
             yield return new WaitForSeconds(3);
         }
     }
     public void TakeDamage(int amount)
     {
         health -= amount;
-        if(health < 0)
+
+        UpdateHealthBar();
+
+        if (health < 0)
         {
             Time.timeScale = 0;
         }
+    }
+
+    void UpdateHealthBar()
+    {
+        bossHpBar.fillAmount = (float)health / maxHealth;
     }
 
 }
