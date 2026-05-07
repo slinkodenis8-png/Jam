@@ -563,7 +563,7 @@ GameObject:
   - component: {fileID: 428629227}
   - component: {fileID: 428629229}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5961,7 +5961,7 @@ MonoBehaviour:
   tracePrefab: {fileID: 37005011606997688, guid: 7d9981fff4010974cb5e252fb6c07d87, type: 3}
   target: {fileID: 428629225}
   firePoint: {fileID: 0}
-  bulletData: {fileID: 11400000, guid: 3967983c91aaaed4b8ed2d95fcc001e2, type: 2}
+  bulletData: {fileID: 11400000, guid: 589d772c09a6fbc41a6a3e01d8dc86f9, type: 2}
   shotCooldown: 1
 --- !u!1 &1081914323
 GameObject:

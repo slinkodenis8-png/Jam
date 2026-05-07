@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour, IProjectile
+public class BulletWall : MonoBehaviour, IProjectile
 {
     public event Action OnDeath;
 
@@ -23,9 +23,9 @@ public class Projectile : MonoBehaviour, IProjectile
     [SerializeField]
     private SpriteRenderer spriteRenderer;
     [SerializeField]
-    private Collider2D coll;
+    private Collider2D[] colls;
     [SerializeField]
-    private TrailRenderer trailRenderer;
+    private TrailRenderer[] trailRenderers;
     [SerializeField]
     private ParticleSystem particles;
 
@@ -37,7 +37,8 @@ public class Projectile : MonoBehaviour, IProjectile
 
     void Start()
     {
-        
+        colls = GetComponentsInChildren<Collider2D>();
+        trailRenderers = GetComponentsInChildren<TrailRenderer>();
     }
 
     void FixedUpdate()
@@ -61,9 +62,17 @@ public class Projectile : MonoBehaviour, IProjectile
 
     void OnEnable()
     {
-        coll.enabled = true;
-        spriteRenderer.enabled = true;
-        trailRenderer.Clear();
+        // foreach (Collider2D coll in colls)
+        // {
+        //     coll.enabled = true;
+        // }
+        // spriteRenderer.enabled = true;
+
+        foreach (TrailRenderer trailRenderer in trailRenderers)
+        {
+            trailRenderer.Clear();
+        }
+        
         isActive = true;
     }
 
