@@ -28,6 +28,8 @@ public class WOFAI : MonoBehaviour, IDamageable
 
     void Start()
     {
+        Pooler.ClearAllPools();
+
         if (rb == null) rb = GetComponent<Rigidbody2D>();
         health = maxHealth;
         currentPhaseData = phases.Count > 0 ? phases[0] : new PhaseData();

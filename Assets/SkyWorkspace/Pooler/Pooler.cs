@@ -71,6 +71,10 @@ public static class Pooler
         }
     }
 
+    public static void ClearAllPools()
+    {
+        pools.Clear();
+    }
 
     public static void DestroyAllInactiveObjects()
     {
