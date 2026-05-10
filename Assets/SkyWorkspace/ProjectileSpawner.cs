@@ -21,6 +21,11 @@ public class ProjectileSpawner : MonoBehaviour
         LaunchBulletInDirection(bulletData, firePoint.position, GetDirection(firePoint, target));
     }
 
+    public void FireOnce(BulletSettings bulletData, Vector3 firePoint, Vector3 target)
+    {
+        LaunchBulletInDirection(bulletData, firePoint, GetDirection(firePoint, target));
+    }
+
     public void FireFixedSpread(BulletSettings bulletData, Transform firePoint, Transform target, int bulletCount = 5, float spreadAngle = 45f)
     {
         Vector3 baseDirection = GetDirection(firePoint, target);
@@ -55,6 +60,11 @@ public class ProjectileSpawner : MonoBehaviour
     public Vector3 GetDirection(Transform from, Transform to)
     {
         return (to.position - from.position).normalized;
+    }
+
+    public Vector3 GetDirection(Vector3 from, Vector3 to)
+    {
+        return (to - from).normalized;
     }
 
     private void LaunchBulletInDirection(BulletSettings bulletData, Vector3 from, Vector3 direction)

@@ -105,6 +105,11 @@ public class BulletWall : MonoBehaviour, IProjectile
         forwardSpeedCurve = bulletSettings.forwardSpeedCurve;
         sidewaysSpeedCurve = bulletSettings.sidewaysSpeedCurve;
 
+        foreach (TrailRenderer trailRenderer in trailRenderers)
+        {
+            trailRenderer.Clear();
+        }
+
         StartCoroutine(DestroyAfterLifetime());
     }
 }

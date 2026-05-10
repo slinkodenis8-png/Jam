@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8666b007112c2d346a2b9bf60990bcd5, type: 3}
-  m_Name: BulletData 1
+  m_Name: WallShot
   m_EditorClassIdentifier: Assembly-CSharp::BulletSettingsSO
   bulletSettings:
     bulletPrefab: {fileID: 5308588187229936394, guid: 285e24c4e5e0a7b4aa415935f4a1c5ac, type: 3}
     xSpeed: 8
-    ySpeed: 3
+    ySpeed: 0
     lifetime: 5
     damage: 5
     forwardSpeedCurve:
@@ -65,40 +65,22 @@ MonoBehaviour:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
-        inSlope: 5.0412602
-        outSlope: 5.0412602
+        value: 1
+        inSlope: 0
+        outSlope: 0
         tangentMode: 34
         weightedMode: 0
         inWeight: 0
-        outWeight: 0.33333334
+        outWeight: 0
       - serializedVersion: 3
-        time: 0.098800614
-        value: 0.4980796
-        inSlope: 5.0412602
-        outSlope: -5.01522
-        tangentMode: 69
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.29889277
-        value: -0.5054265
-        inSlope: -5.01522
-        outSlope: 4.917655
-        tangentMode: 69
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.3996059
-        value: -0.010154098
-        inSlope: 4.917655
-        outSlope: 4.917655
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
         tangentMode: 34
         weightedMode: 0
-        inWeight: 0.33333334
+        inWeight: 0
         outWeight: 0
       m_PreInfinity: 2
-      m_PostInfinity: 1
+      m_PostInfinity: 2
       m_RotationOrder: 4
