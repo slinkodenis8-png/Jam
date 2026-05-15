@@ -1,0 +1,1352 @@
+fileFormatVersion: 2
+guid: 998a809b7dcc4dd48a080dccfaf708cc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3076574634665887748
+    second: bossfirst_ice_spritesheet_0
+  - first:
+      213: -505355663864810903
+    second: bossfirst_ice_spritesheet_1
+  - first:
+      213: 3223230683173632918
+    second: bossfirst_ice_spritesheet_2
+  - first:
+      213: 1105717851915588400
+    second: bossfirst_ice_spritesheet_3
+  - first:
+      213: 181313104064434939
+    second: bossfirst_ice_spritesheet_4
+  - first:
+      213: 3289296622487687444
+    second: bossfirst_ice_spritesheet_5
+  - first:
+      213: -2815999358924044870
+    second: bossfirst_ice_spritesheet_6
+  - first:
+      213: -4460056302147745287
+    second: bossfirst_ice_spritesheet_7
+  - first:
+      213: -4064015718053968661
+    second: bossfirst_ice_spritesheet_8
+  - first:
+      213: 8822403506061941166
+    second: bossfirst_ice_spritesheet_9
+  - first:
+      213: 8934013288910345101
+    second: bossfirst_ice_spritesheet_10
+  - first:
+      213: -1074289600977287623
+    second: bossfirst_ice_spritesheet_11
+  - first:
+      213: 6317973430708005380
+    second: bossfirst_ice_spritesheet_12
+  - first:
+      213: -1596784179760131454
+    second: bossfirst_ice_spritesheet_13
+  - first:
+      213: 2487807684919452318
+    second: bossfirst_ice_spritesheet_14
+  - first:
+      213: 440817033487830328
+    second: bossfirst_ice_spritesheet_15
+  - first:
+      213: 8021566105332488916
+    second: bossfirst_ice_spritesheet_16
+  - first:
+      213: 2928488208806162468
+    second: bossfirst_ice_spritesheet_17
+  - first:
+      213: -5349374711759238167
+    second: bossfirst_ice_spritesheet_18
+  - first:
+      213: -4839866576406189012
+    second: bossfirst_ice_spritesheet_19
+  - first:
+      213: -4479425368225097296
+    second: bossfirst_ice_spritesheet_20
+  - first:
+      213: -7665137101156608006
+    second: bossfirst_ice_spritesheet_21
+  - first:
+      213: -5318325424049296096
+    second: bossfirst_ice_spritesheet_22
+  - first:
+      213: -1556437111973927012
+    second: bossfirst_ice_spritesheet_23
+  - first:
+      213: -3911755460939738619
+    second: bossfirst_ice_spritesheet_24
+  - first:
+      213: -8676822638907924712
+    second: bossfirst_ice_spritesheet_25
+  - first:
+      213: 6870888110057872916
+    second: bossfirst_ice_spritesheet_26
+  - first:
+      213: 6958563802920588840
+    second: bossfirst_ice_spritesheet_27
+  - first:
+      213: -7235457755689738209
+    second: bossfirst_ice_spritesheet_28
+  - first:
+      213: -5166224913184095602
+    second: bossfirst_ice_spritesheet_29
+  - first:
+      213: -2787314265061043847
+    second: bossfirst_ice_spritesheet_30
+  - first:
+      213: -3294936916592625507
+    second: bossfirst_ice_spritesheet_31
+  - first:
+      213: -3548786066990215473
+    second: bossfirst_ice_spritesheet_32
+  - first:
+      213: -7345336015312116020
+    second: bossfirst_ice_spritesheet_33
+  - first:
+      213: 156451605436229623
+    second: bossfirst_ice_spritesheet_34
+  - first:
+      213: 618548174554895249
+    second: bossfirst_ice_spritesheet_35
+  - first:
+      213: 795523307557130785
+    second: bossfirst_ice_spritesheet_36
+  - first:
+      213: -6355095249296560425
+    second: bossfirst_ice_spritesheet_37
+  - first:
+      213: 3084037887693939302
+    second: bossfirst_ice_spritesheet_38
+  - first:
+      213: 4926958368555743097
+    second: bossfirst_ice_spritesheet_39
+  - first:
+      213: -7663229511843499453
+    second: bossfirst_ice_spritesheet_40
+  - first:
+      213: 8199183564897368374
+    second: bossfirst_ice_spritesheet_41
+  - first:
+      213: -1479132836573018458
+    second: bossfirst_ice_spritesheet_42
+  - first:
+      213: 9101934897165700991
+    second: bossfirst_ice_spritesheet_43
+  - first:
+      213: -2233603340880517513
+    second: bossfirst_ice_spritesheet_44
+  - first:
+      213: -8551517100553637991
+    second: bossfirst_ice_spritesheet_45
+  - first:
+      213: 1274980762525819722
+    second: bossfirst_ice_spritesheet_46
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 575
+        width: 69
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 408cc30745032ba20800000000000000
+      internalID: 3076574634665887748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 575
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9623b1283bd9cf8f0800000000000000
+      internalID: -505355663864810903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 575
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69b34bb9a373bbc20800000000000000
+      internalID: 3223230683173632918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 575
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0339c39278c485f00800000000000000
+      internalID: 1105717851915588400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 575
+        width: 78
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf252e8be47248200800000000000000
+      internalID: 181313104064434939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 575
+        width: 76
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4115548c9dde5ad20800000000000000
+      internalID: 3289296622487687444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 575
+        width: 77
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab5ca9bb08f8be8d0800000000000000
+      internalID: -2815999358924044870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 640
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f9cd307c62ba12c0800000000000000
+      internalID: -4460056302147745287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 575
+        width: 68
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be40acb8c37b997c0800000000000000
+      internalID: -4064015718053968661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 620
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea99bf3ee397f6a70800000000000000
+      internalID: 8822403506061941166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 616
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d83de1870cdfbfb70800000000000000
+      internalID: 8934013288910345101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 463
+        width: 69
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9364adbbc4b5711f0800000000000000
+      internalID: -1074289600977287623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 463
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40ae4b57c53fda750800000000000000
+      internalID: 6317973430708005380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 463
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2821f66af3517d9e0800000000000000
+      internalID: -1596784179760131454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 463
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e926c1198e7768220800000000000000
+      internalID: 2487807684919452318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 463
+        width: 78
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83dcbf3a1c81e1600800000000000000
+      internalID: 440817033487830328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 463
+        width: 76
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4da18aa6fd3525f60800000000000000
+      internalID: 8021566105332488916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 463
+        width: 77
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 420bfc6928414a820800000000000000
+      internalID: 2928488208806162468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 528
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb0227ba0433c5b0800000000000000
+      internalID: -5349374711759238167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 463
+        width: 68
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2ce501ddf655dcb0800000000000000
+      internalID: -4839866576406189012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 508
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b9d1115c52e5d1c0800000000000000
+      internalID: -4479425368225097296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 504
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af794ea0b66ff9590800000000000000
+      internalID: -7665137101156608006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 303
+        width: 69
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02dec9b54338136b0800000000000000
+      internalID: -5318325424049296096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 303
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c972f8961bc666ae0800000000000000
+      internalID: -1556437111973927012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 303
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5021e763227a6b9c0800000000000000
+      internalID: -3911755460939738619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 303
+        width: 76
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81f53dc18cbb59780800000000000000
+      internalID: -8676822638907924712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 303
+        width: 68
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41e5473255c4a5f50800000000000000
+      internalID: 6870888110057872916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 303
+        width: 77
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82619f329e8c19060800000000000000
+      internalID: 6958563802920588840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 368
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f10a4cc918d769b90800000000000000
+      internalID: -7235457755689738209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 348
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8283e330d1ed48b0800000000000000
+      internalID: -5166224913184095602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 344
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97158a991787159d0800000000000000
+      internalID: -2787314265061043847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 159
+        width: 69
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d98fc29e4580642d0800000000000000
+      internalID: -3294936916592625507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 159
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fce4135dfdd20cec0800000000000000
+      internalID: -3548786066990215473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 159
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc62073bfcf101a90800000000000000
+      internalID: -7345336015312116020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 159
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f7e09ef7e3db2200800000000000000
+      internalID: 156451605436229623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 159
+        width: 76
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1939fcc9946859800800000000000000
+      internalID: 618548174554895249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 159
+        width: 68
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1229c7dbb344a0b00800000000000000
+      internalID: 795523307557130785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 159
+        width: 77
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dee7ef9a8a2ec7a0800000000000000
+      internalID: -6355095249296560425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 224
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 662e7d17e14bcca20800000000000000
+      internalID: 3084037887693939302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 159
+        width: 68
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97737e43882106440800000000000000
+      internalID: 4926958368555743097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 204
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 342374a4c5db6a590800000000000000
+      internalID: -7663229511843499453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 200
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 639bde9d20a59c170800000000000000
+      internalID: 8199183564897368374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 200
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a6037c9580197be0800000000000000
+      internalID: -1479132836573018458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 15
+        width: 69
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7f0b4a9091905e70800000000000000
+      internalID: 9101934897165700991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 15
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 776e0b97895a001e0800000000000000
+      internalID: -2233603340880517513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 15
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99f62d24188e25980800000000000000
+      internalID: -8551517100553637991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossfirst_ice_spritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 15
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a43eec59f34a1b110800000000000000
+      internalID: 1274980762525819722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bossfirst_ice_spritesheet_0: 3076574634665887748
+      bossfirst_ice_spritesheet_1: -505355663864810903
+      bossfirst_ice_spritesheet_10: 8934013288910345101
+      bossfirst_ice_spritesheet_11: -1074289600977287623
+      bossfirst_ice_spritesheet_12: 6317973430708005380
+      bossfirst_ice_spritesheet_13: -1596784179760131454
+      bossfirst_ice_spritesheet_14: 2487807684919452318
+      bossfirst_ice_spritesheet_15: 440817033487830328
+      bossfirst_ice_spritesheet_16: 8021566105332488916
+      bossfirst_ice_spritesheet_17: 2928488208806162468
+      bossfirst_ice_spritesheet_18: -5349374711759238167
+      bossfirst_ice_spritesheet_19: -4839866576406189012
+      bossfirst_ice_spritesheet_2: 3223230683173632918
+      bossfirst_ice_spritesheet_20: -4479425368225097296
+      bossfirst_ice_spritesheet_21: -7665137101156608006
+      bossfirst_ice_spritesheet_22: -5318325424049296096
+      bossfirst_ice_spritesheet_23: -1556437111973927012
+      bossfirst_ice_spritesheet_24: -3911755460939738619
+      bossfirst_ice_spritesheet_25: -8676822638907924712
+      bossfirst_ice_spritesheet_26: 6870888110057872916
+      bossfirst_ice_spritesheet_27: 6958563802920588840
+      bossfirst_ice_spritesheet_28: -7235457755689738209
+      bossfirst_ice_spritesheet_29: -5166224913184095602
+      bossfirst_ice_spritesheet_3: 1105717851915588400
+      bossfirst_ice_spritesheet_30: -2787314265061043847
+      bossfirst_ice_spritesheet_31: -3294936916592625507
+      bossfirst_ice_spritesheet_32: -3548786066990215473
+      bossfirst_ice_spritesheet_33: -7345336015312116020
+      bossfirst_ice_spritesheet_34: 156451605436229623
+      bossfirst_ice_spritesheet_35: 618548174554895249
+      bossfirst_ice_spritesheet_36: 795523307557130785
+      bossfirst_ice_spritesheet_37: -6355095249296560425
+      bossfirst_ice_spritesheet_38: 3084037887693939302
+      bossfirst_ice_spritesheet_39: 4926958368555743097
+      bossfirst_ice_spritesheet_4: 181313104064434939
+      bossfirst_ice_spritesheet_40: -7663229511843499453
+      bossfirst_ice_spritesheet_41: 8199183564897368374
+      bossfirst_ice_spritesheet_42: -1479132836573018458
+      bossfirst_ice_spritesheet_43: 9101934897165700991
+      bossfirst_ice_spritesheet_44: -2233603340880517513
+      bossfirst_ice_spritesheet_45: -8551517100553637991
+      bossfirst_ice_spritesheet_46: 1274980762525819722
+      bossfirst_ice_spritesheet_5: 3289296622487687444
+      bossfirst_ice_spritesheet_6: -2815999358924044870
+      bossfirst_ice_spritesheet_7: -4460056302147745287
+      bossfirst_ice_spritesheet_8: -4064015718053968661
+      bossfirst_ice_spritesheet_9: 8822403506061941166
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

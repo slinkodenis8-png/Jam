@@ -33,9 +33,12 @@ public class BossAI : MonoBehaviour
 
     public Transform[] higherPoints;
     public Transform[] lowerPoints;
+
+    private Animator anim;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
 
@@ -52,6 +55,7 @@ private void FixedUpdate()
         }
         if (isAttack && !scndStage)
         {
+            anim.SetBool("isAttack", true);
             BreakTime = 4;
             transform.position = Vector3.MoveTowards(transform.position, movePoints[currentPoint].position, speed * Time.deltaTime);
             if (Mathf.Round(transform.position.x) == Mathf.Round(movePoints[currentPoint].position.x) && Mathf.Round(transform.position.y) == Mathf.Round(movePoints[currentPoint].position.y))
@@ -73,6 +77,11 @@ private void FixedUpdate()
         }
         else
         {
+            if(!scndStage)
+            {
+
+            anim.SetBool("isAttack", false);
+            }
             attackTime = 6;
            transform.position =  Vector3.MoveTowards(transform.position, breakPoint.position, speed * Time.deltaTime);
             BreakTime -= Time.deltaTime;
@@ -115,8 +124,8 @@ private void FixedUpdate()
         bool queue = false;
         while (true)
         {
-
-        queue = !queue;
+            
+            queue = !queue;
         if (queue)
         {
             for(int i = 0; i < higherPoints.Length; i++)
