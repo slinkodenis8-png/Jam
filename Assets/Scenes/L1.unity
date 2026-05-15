@@ -1156,7 +1156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 632190506}
   - component: {fileID: 632190505}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2056,7 +2056,7 @@ GameObject:
   m_Component:
   - component: {fileID: 861279884}
   - component: {fileID: 861279885}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spot Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2219,7 +2219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 884896634}
   - component: {fileID: 884896635}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2300,6 +2300,56 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &908408622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 908408623}
+  - component: {fileID: 908408624}
+  m_Layer: 6
+  m_Name: Gun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &908408623
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908408622}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.36538327, z: 0}
+  m_LocalScale: {x: 7.387449, y: 7.387449, z: 7.3874483}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1074326204}
+  m_Father: {fileID: 1737866349}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &908408624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908408622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52808e52d0d0254ba363cdb787e737a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TopDownGun
+  gunTransform: {fileID: 908408623}
+  gunPoint: {fileID: 1074326204}
+  projectilePrefab: {fileID: 6590642321187081258, guid: 6f73da8a4868c4842afbab64a49eddc7, type: 3}
+  fireRate: 0.5
+  projectileSO: {fileID: 11400000, guid: de30ecf16c70e3c4c9ee922460d72ffb, type: 2}
 --- !u!1 &946116207
 GameObject:
   m_ObjectHideFlags: 0
@@ -2372,7 +2422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 972176465}
   - component: {fileID: 972176466}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pngtree-ice-cube-png-image_16279692_30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2514,6 +2564,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 666264988}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1074326203
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1074326204}
+  m_Layer: 6
+  m_Name: GunPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1074326204
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074326203}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 908408623}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1114384633
 GameObject:
@@ -2699,7 +2780,7 @@ GameObject:
   - component: {fileID: 1274117446}
   - component: {fileID: 1274117448}
   - component: {fileID: 1274117447}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2869,7 +2950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1355158773}
   - component: {fileID: 1355158774}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3358,7 +3439,7 @@ GameObject:
   - component: {fileID: 1737866344}
   - component: {fileID: 1737866350}
   - component: {fileID: 1737866343}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -8298,6 +8379,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 632190506}
+  - {fileID: 908408623}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &1737866350
@@ -8393,7 +8475,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -489
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.23333335, y: 0.16666669, z: 0}
@@ -11185,7 +11267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1934545285}
   - component: {fileID: 1934545286}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trail (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

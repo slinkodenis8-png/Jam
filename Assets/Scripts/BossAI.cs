@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-public class BossAI : MonoBehaviour
+public class BossAI : MonoBehaviour, IDamageable
 {
     public bool isAttack;
     public Transform[] movePoints;
@@ -145,6 +145,14 @@ private void FixedUpdate()
             }
         }
             yield return new WaitForSeconds(3);
+        }
+    }
+    public void TakeDamage(int amount)
+    {
+        health -= amount;
+        if(health < 0)
+        {
+            Time.timeScale = 0;
         }
     }
 

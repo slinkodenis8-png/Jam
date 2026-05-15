@@ -98,4 +98,8 @@ public class Projectile : MonoBehaviour, IProjectile
 
         StartCoroutine(DestroyAfterLifetime());
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        GetComponent<IDamageable>().TakeDamage(1);
+    }
 }

@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-public class PlayerMeltdown : MonoBehaviour
+public class PlayerMeltdown : MonoBehaviour, IDamageable
 {
     public event Action OnPlayerMelted;
 
@@ -138,6 +138,10 @@ public class PlayerMeltdown : MonoBehaviour
     public void StartCounter()
     {
         frameCounter = 0;
+    }
+    public void TakeDamage(int amount)
+    {
+        SubtractFromCounter(amount);
     }
 
     // public void SetMinScale(Vector3 newMinScale)
