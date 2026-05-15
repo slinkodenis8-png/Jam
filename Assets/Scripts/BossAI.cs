@@ -10,12 +10,16 @@ public class BossAI : MonoBehaviour
     public int currentPoint;
 
     public float speed;
+    [Range (0,100)]
+    public int health=100;
 
     public float attackTime;
     public float BreakTime;
 
     private Rigidbody2D rb;
     public bool ended;
+    public bool scndStage;
+    public bool used;
 
 
     public Transform breakPoint;
@@ -26,6 +30,9 @@ public class BossAI : MonoBehaviour
 
     public BulletSettingsSO bulletData;
     public GameObject tracePrefab;
+
+    public Transform[] higherPoints;
+    public Transform[] lowerPoints;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -38,7 +45,12 @@ public class BossAI : MonoBehaviour
 
 private void FixedUpdate()
     {
-        if (isAttack)
+        if (health <=30)
+        {
+            isAttack = false;
+            scndStage = true;
+        }
+        if (isAttack && !scndStage)
         {
             BreakTime = 4;
             transform.position = Vector3.MoveTowards(transform.position, movePoints[currentPoint].position, speed * Time.deltaTime);
@@ -74,12 +86,16 @@ private void FixedUpdate()
                
                 StartCoroutine(att());
             }
+        if (scndStage && used == false)
+        {
+            StartCoroutine(scndAtt());
+        }
     }
     public IEnumerator att()
     {
         ended = false;
         yield return new WaitForSeconds(1);
-        if (isAttack)
+        if (isAttack && !scndStage)
         {
             ProjectileSpawner.Instance.FireFixedSpread(bulletData.bulletSettings, transform, Player);
         }
@@ -91,6 +107,36 @@ private void FixedUpdate()
             ProjectileSpawner.Instance.FireOnce(bulletData.bulletSettings, transform, Player);
         }
         ended = true;
+    }
+
+    public IEnumerator scndAtt()
+    {
+        used = true;
+        bool queue = false;
+        while (true)
+        {
+
+        queue = !queue;
+        if (queue)
+        {
+            for(int i = 0; i < higherPoints.Length; i++)
+            {
+                TraceManager.Instance.DrawLineOverTime(higherPoints[i].transform.position, lowerPoints[i].position, tracePrefab, 0.9f, 0.3f, 0.3f);
+
+                ProjectileSpawner.Instance.FireOnce(bulletData.bulletSettings, higherPoints[i].transform, lowerPoints[i].transform);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < higherPoints.Length; i++)
+            {
+                TraceManager.Instance.DrawLineOverTime(lowerPoints[i].transform.position, higherPoints[i].position, tracePrefab, 0.9f, 0.3f, 0.3f);
+
+                ProjectileSpawner.Instance.FireOnce(bulletData.bulletSettings, lowerPoints[i].transform, higherPoints[i].transform);
+            }
+        }
+            yield return new WaitForSeconds(3);
+        }
     }
 
 }
