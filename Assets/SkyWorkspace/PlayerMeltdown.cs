@@ -8,7 +8,7 @@ public class PlayerMeltdown : MonoBehaviour
 
     [Header("Counter Settings")]
     [SerializeField] private int maxValue = 100;
-    [SerializeField] private int currentValue;
+    public int currentValue;
     public int meltSpeed = 1;
     [SerializeField] private int framesBetweenDecrement = 25;
 

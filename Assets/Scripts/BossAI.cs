@@ -1,11 +1,10 @@
 using System.Collections;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class BossAI : MonoBehaviour
 {
     public bool isAttack;
-    public GameObject bullet;
-    public GameObject bulletPack;
     public Transform[] movePoints;
 
     public int currentPoint;
@@ -18,13 +17,15 @@ public class BossAI : MonoBehaviour
     private Rigidbody2D rb;
     public bool ended;
 
-    private int rand;
 
     public Transform breakPoint;
 
     public Transform Player;
 
     public float offset;
+
+    public BulletSettingsSO bulletData;
+    public GameObject tracePrefab;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -33,16 +34,7 @@ public class BossAI : MonoBehaviour
 
  
 
-    void Update()
-    {
-        if (Player != null)
-        {
-            Vector3 difference = Player.position - transform.position;
-            difference.Normalize();
-            float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
-        }
-    }
+    
 
 private void FixedUpdate()
     {
@@ -61,11 +53,6 @@ private void FixedUpdate()
                     currentPoint = 0;
                 }
             }
-            if (ended)
-            {
-                rand = Random.Range(0, 3);
-                StartCoroutine(att());
-            }
             attackTime -= Time.deltaTime;
             if(attackTime < 0)
             {
@@ -82,19 +69,26 @@ private void FixedUpdate()
                 isAttack = true;
             }
         }
+            if (ended)
+            {
+               
+                StartCoroutine(att());
+            }
     }
     public IEnumerator att()
     {
         ended = false;
-        yield return new WaitForSeconds(2);
-        if (rand == 0)
+        yield return new WaitForSeconds(1);
+        if (isAttack)
         {
-            Instantiate(bullet,transform.position,transform.rotation);
+            ProjectileSpawner.Instance.FireFixedSpread(bulletData.bulletSettings, transform, Player);
         }
         else
         {
-           
-            Instantiate(bulletPack,transform.position, transform.rotation);
+
+                TraceManager.Instance.DrawLineOverTime(transform.position, Player.position, tracePrefab, 0.9f, 0.3f, 0.3f);
+            
+            ProjectileSpawner.Instance.FireOnce(bulletData.bulletSettings, transform, Player);
         }
         ended = true;
     }
