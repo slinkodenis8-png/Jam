@@ -6,6 +6,8 @@ public class PlayerMeltdown : MonoBehaviour, IDamageable
 {
     public event Action OnPlayerMelted;
 
+    public GameObject losPanel;
+
     [Header("Counter Settings")]
     [SerializeField] private int maxValue = 100;
     public int currentValue;
@@ -88,6 +90,13 @@ public class PlayerMeltdown : MonoBehaviour, IDamageable
         var rate = emissionModule.rateOverTime;
         rate.constant = Math.Clamp(defaultParticleRate * meltSpeed, minParticleRate, maxParticleRate);
         emissionModule.rateOverTime = rate;
+
+        if (currentValue <= minScale.x)
+        {
+            Time.timeScale = 0;
+            losPanel.SetActive(true);
+        }
+       
     }
 
     public void SetCounterValue(int newValue)

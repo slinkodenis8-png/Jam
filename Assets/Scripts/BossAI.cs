@@ -40,6 +40,8 @@ public class BossAI : MonoBehaviour, IDamageable
 
     public Image bossHpBar;
 
+    public GameObject winPanel;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -160,6 +162,7 @@ public class BossAI : MonoBehaviour, IDamageable
 
         if (health < 0)
         {
+            winPanel.SetActive(true);
             Time.timeScale = 0;
         }
     }

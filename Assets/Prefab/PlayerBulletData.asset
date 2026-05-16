@@ -17,7 +17,7 @@ MonoBehaviour:
     xSpeed: 11.5
     ySpeed: 0
     lifetime: 5
-    damage: 5
+    damage: 2
     forwardSpeedCurve:
       serializedVersion: 2
       m_Curve:
