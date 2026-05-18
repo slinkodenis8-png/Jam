@@ -263,6 +263,7 @@ MonoBehaviour:
   xSpeed: 10
   ySpeed: 10
   maxLifetime: 0
+  currentLifetime: 0
   damage: 0
   rb: {fileID: 3338904343088283851}
   spriteRenderer: {fileID: 4801330186667852993}

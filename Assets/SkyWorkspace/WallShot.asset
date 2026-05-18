@@ -16,7 +16,7 @@ MonoBehaviour:
     bulletPrefab: {fileID: 5308588187229936394, guid: 285e24c4e5e0a7b4aa415935f4a1c5ac, type: 3}
     xSpeed: 8
     ySpeed: 0
-    lifetime: 5
+    lifetime: 10
     damage: 5
     forwardSpeedCurve:
       serializedVersion: 2

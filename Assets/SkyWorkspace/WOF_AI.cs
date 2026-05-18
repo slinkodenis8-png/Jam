@@ -2,11 +2,15 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using System;
+using UnityEngine.UI;
 
 public class WOFAI : MonoBehaviour, IDamageable
 {
     public int currentPhase = 0;
-    public int maxHealth = 1000;
+    public Image slider;
+    public GameObject winPanel;
+    public int maxHealth = 400;
+    [Range(0, 400)]
     public int health;
     public PhaseData currentPhaseData;
 
@@ -27,7 +31,7 @@ public class WOFAI : MonoBehaviour, IDamageable
         if (rb == null) rb = GetComponent<Rigidbody2D>();
         health = maxHealth;
         currentPhaseData = phases.Count > 0 ? phases[0] : new PhaseData();
-
+        health = maxHealth;
         StartAttack();
     }
 
@@ -52,6 +56,12 @@ public class WOFAI : MonoBehaviour, IDamageable
     public void TakeDamage(int amount)
     {
         health = Mathf.Max(0, health - amount);
+        slider.fillAmount = (float)health / maxHealth;
+        if(health <= 0)
+        {
+            Time.timeScale = 0;
+            winPanel.SetActive(true);
+        }
         CheckPhase();
     }
 

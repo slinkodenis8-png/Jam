@@ -35,8 +35,9 @@ public class TopDownCharacterController : MonoBehaviour
             enabled = false;
             return;
         }
+        Time.timeScale = 1f;
 
-        rb.gravityScale = 0f;
+        
         rb.interpolation = RigidbodyInterpolation2D.Interpolate;
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
     }
